@@ -1,0 +1,402 @@
+/* body and general */
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* -------------------- interface ------------------- */
+
+.inter-face {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(imgs/pc-g2d4660420_1920.jpg);
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+nav .nav-div {
+    flex-direction: row;
+    width: 20%;
+    text-align: center;
+    margin: 1% 0;
+}
+
+nav .nav-div a {
+    font-size: 32px;
+    color: rgba(179,81,20,255);
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.my-img {
+    flex-direction: row;
+    width: 33.33%;
+    flex-grow: 1;
+    min-width: 330px;
+}
+
+.my-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.my-name {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    width: 66.66%;
+    font-size: 50px;
+    min-width: 500px;
+}
+
+.my-name div {
+    width: 33.3%;
+}
+
+.my-name .name {
+    width: 350px;
+    height: 100px;
+    border-radius: 40%;
+    background-color: rgba(179,81,20,255);
+    margin-top: 5%;
+}
+
+.my-name b {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding-top: 5%;
+}
+
+@media screen and (max-width: 950px){
+    nav {
+        display: none;
+    }
+
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .my-name .name {
+        width: 450px;
+        height: 100px;
+        border-radius: 36%;
+    }
+}
+
+@media screen and (max-width:440px) {
+    
+    .my-name .name {
+        margin: 5% 0 0 -30%;
+        font-size: 40px;
+    }
+}
+
+
+/* -------------------- about-me ------------------- */
+
+
+
+.about-me {
+    background-color: #e8e7e7e0;
+    color: black;
+}
+
+.introduce-me {
+    padding: 0 0 5% 0;
+    font-size: 38px;
+    text-align: center;
+    line-height: 50px;
+    word-spacing: 5px;
+}
+
+.introduce-me a {
+    text-decoration: none;
+    color: rgba(179,81,20,255);
+}
+
+.orange-line-bar {
+    font-style: italic;
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.orange-line-bar p {
+    background-color: rgba(179,81,20,255);
+}
+
+.hobbies-section {
+    width: 100%;
+}
+
+.hobbies-photo {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.hobbies-photo-2 {
+    display: none;
+}
+
+.befor-line {
+    width: 49.9%;
+}
+
+.v-line {
+    width: 4px;
+    height: 1100px;
+    background-color: rgba(179,81,20,255);
+}
+
+.after-line {
+    width: 49.9%;
+}
+
+
+.hobbies {
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+    padding: 10%;
+}
+
+.swimming-photo, .reading-photo, .farming-photo, .traveling-photo {
+    text-align: center;
+}
+
+.swimming-photo img {
+    width: 450px;
+    height: 300px;
+}
+
+.reading-photo img {
+    width: 360px;
+    height: 270px;
+}
+
+.farming-photo img {
+    width: 450px;
+    height: 350px;
+}
+
+.traveling-photo img {
+    width: 370px;
+    height: 370px;
+}
+
+@media screen and (min-width:650px) and (max-width: 950px){
+    
+    .swimming-photo img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .reading-photo img {
+        width: 260px;
+        height: 200px;
+    }
+
+    .farming-photo img {
+        width: 300px;
+        height: 240px;
+    }
+
+    .traveling-photo img {
+        width: 300px;
+        height: 270px;
+    }
+
+    .v-line {
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 649px){
+    
+    .hobbies-photo{
+        display: none;
+        visibility: hidden;
+        position: absolute;
+
+    }
+
+    .hobbies-photo-2{
+        display: block;
+    }
+
+    .swimming-photo img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .reading-photo img {
+        width: 300px;
+        height: 270px;
+    }
+
+    .farming-photo img {
+        width: 310px;
+        height: 220px;
+    }
+
+    .traveling-photo img {
+        width: 280px;
+        height: 260px;
+    }
+
+    .hobbies-photo {
+        display: block;
+    }
+}
+
+
+
+/* -------------------- Skills ------------------- */
+
+
+@keyframes linemotion {
+    from { transform: translateX(0);}
+    to {transform: translateX(-800%);}
+}
+
+
+.skills {
+    width: 100%;
+    background-color:  #e8e7e7e0;
+    color: black;
+}
+
+.skills-name {
+    padding: 5% 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+
+.skills-name p {
+    background-color: rgba(179,81,20,255);
+}
+
+.skills-list {
+    margin-top: -2px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.skills-list:hover .skill {
+    animation-play-state: paused;
+}
+
+.skills-list::before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0),rgba(179,81,20,255));
+    z-index: 1;
+}
+
+.skills-list::after {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    content: "";
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0),rgba(179,81,20,255));
+    z-index: 1;
+}
+
+.skill {
+    text-align: center;
+    background-color: #f2f2f2; 
+    display: inline-block;
+    width: 25%;
+    height: 260px;
+    margin: -2px;
+    animation: 30s linemotion infinite linear;
+}
+
+.skill-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.css-img img, .js-img img {
+    width: 150px;
+}
+
+.skill-name {
+    font-size: 30px;
+    margin: 2%;
+}
+
+
+.skill-description {
+    font-size: 22px;
+}
+
+
+@media screen and (min-width:650px) and (max-width: 1235px){
+    
+    .skill {
+        width: 50%;
+    }
+
+    .skills-list::before {
+        width: 19%;
+    }
+
+    .skills-list::after {
+        width: 19%;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    
+    .skill {
+        width: 100%;
+    }
+
+    .skills-list::before {
+        width: 23%;
+    }
+
+    .skills-list::before {
+        width: 23%;
+    }
+}
+
